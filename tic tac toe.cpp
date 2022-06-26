@@ -17,8 +17,8 @@ using std::to_string;
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1000, 1000), "Tic Tac Toe");
-	// initial interface
 	
+	// initial interface
 	// header
 	shape.setFillColor(sf::Color::Black);
     	sf::Font font;
@@ -28,6 +28,20 @@ int main() {
     	words.setFillColor(sf::Color::Black);
     	words.setOutlineColor(sf::Color::Blue);
     	words.setOutlineThickness(2);
+	
+	// setting
+	
+	// rules
+	
+	// bgm
+	
+	// start
+	
+	// choose mode
+	
+	// single
+	
+	// double
 	
 	//
     
