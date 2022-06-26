@@ -31,7 +31,7 @@ int main() {
 	
 	// setting
 	
-	// rules
+	// rules Zirui 
 	
 	// bgm
 	
