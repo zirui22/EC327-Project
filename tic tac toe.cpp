@@ -18,14 +18,18 @@ using std::to_string;
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1000, 1000), "Tic Tac Toe");
 	// initial interface
-
-	sf::Text words;
-  	words.setFillColor(sf::Color::White);
-  	words.setOutlineColor(sf::Color::White);
-  	sf::Font font;
-  	font.loadFromFile("/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf");
-  	words.setFont(font);
-  	words.setCharacterSize(13);
+	
+	// header
+	shape.setFillColor(sf::Color::Black);
+    	sf::Font font;
+    	font.loadFromFile("/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf");
+    	words.setFont(font);
+    	words.setString("Tic Tac Toe");
+    	words.setFillColor(sf::Color::Black);
+    	words.setOutlineColor(sf::Color::Blue);
+    	words.setOutlineThickness(2);
+	
+	//
     
 
 }
