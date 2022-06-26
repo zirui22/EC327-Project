@@ -51,6 +51,13 @@ int main() {
 	// double
 	// read in positions
 	
-    	//
+    	// *Result window
+	// win
+	
+	// lose
+	
+	// tie
+	
+	// *Start new
 
 }
