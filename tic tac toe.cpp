@@ -17,8 +17,8 @@ using std::to_string;
 
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1000, 1000), "Tic Tac Toe");
-	
-	// *Initial interface
+//Jiawei Sun
+	// *Initial interface 
 	// header
 	shape.setFillColor(sf::Color::Black);
     	sf::Font font;
@@ -32,7 +32,7 @@ int main() {
 	// setting
 	
 	// choose mode
-	
+//
 	// rules Zirui 
 	
 	// bgm
