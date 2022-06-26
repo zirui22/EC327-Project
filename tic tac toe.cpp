@@ -20,14 +20,15 @@ int main() {
 //Jiawei Sun
 	// *Initial interface 
 	// header
+	
 	shape.setFillColor(sf::Color::Black);
     	sf::Font font;
     	font.loadFromFile("/usr/share/fonts/truetype/ubuntu/Ubuntu-BI.ttf");
-    	words.setFont(font);
-    	words.setString("Tic Tac Toe");
-    	words.setFillColor(sf::Color::Black);
-    	words.setOutlineColor(sf::Color::Blue);
-    	words.setOutlineThickness(2);
+    	title.setFont(font);
+    	title.setString("Tic Tac Toe");
+    	title.setFillColor(sf::Color::Black);
+    	title.setOutlineColor(sf::Color::Blue);
+    	title.setOutlineThickness(2);
 	
 	// setting
 	
