@@ -18,7 +18,7 @@ using std::to_string;
 int main() {
 	sf::RenderWindow window(sf::VideoMode(1000, 1000), "Tic Tac Toe");
 	
-	// initial interface
+	// *Initial interface
 	// header
 	shape.setFillColor(sf::Color::Black);
     	sf::Font font;
@@ -31,19 +31,26 @@ int main() {
 	
 	// setting
 	
+	// choose mode
+	
 	// rules Zirui 
 	
 	// bgm
 	
-	// start
+	// *Start
+	// display board
+	// choose chess
+	// display chess
 	
-	// choose mode
 	
+	// *Play
 	// single
+	// read in position
+	// import AI player
 	
 	// double
+	// read in positions
 	
-	//
-    
+    	//
 
 }
