@@ -179,7 +179,13 @@ int main() {
             window.display();
         }
 
-        // 
+        // see rules
+        while (ruleb) {
+            window.clear();
+            sound.setPosition(500,500);
+            window.draw(sound);
+            window.display();
+        }
         }
 
     }
