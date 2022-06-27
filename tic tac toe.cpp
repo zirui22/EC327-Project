@@ -1,5 +1,7 @@
 // Copyright 2022 Jiawei Sun alinajw@bu.edu
 // Copyright 2022 Zirui Chen zirui22@bu.edu
+// Copyright 2022 Haobin Li lihaobin@bu.edu
+// Copyright 2022 Chenyuan Zhao zhaoc23@bu.edu
 
 #include<chrono>
 #include<ctime>
@@ -55,6 +57,40 @@ int main() {
    	rules.setOutlineColor(sf::Color::Yellow);
    	rules.setOutlineThickness(2);
    	rules.setCharacterSize(40);
+	
+	// rules details
+	sf::Text rules1;
+    rules1.setFont(font);
+   	rules1.setString("1. The game is played on a grid that's 3 squares by 3 squares.");
+    rules1.setFillColor(sf::Color::White);
+   	rules1.setOutlineColor(sf::Color::Red);
+   	rules1.setOutlineThickness(1);
+   	rules1.setCharacterSize(20);
+
+   	   	sf::Text rules2;
+    rules2.setFont(font);
+   	rules2.setString("2. You are X, your friend (or the computer in this case) is O. Players take turns putting their marks in" "\n" "empty squares.");
+    rules2.setFillColor(sf::Color::White);
+   	rules2.setOutlineColor(sf::Color::Blue);
+   	rules2.setOutlineThickness(1);
+   	rules2.setCharacterSize(20);
+
+   	   	sf::Text rules3;
+    rules3.setFont(font);
+   	rules3.setString("3. The first player to get 3 of her marks in a row (up, down, across, or diagonally) is the winner.");
+    rules3.setFillColor(sf::Color::White);
+   	rules3.setOutlineColor(sf::Color::Red);
+   	rules3.setOutlineThickness(1);
+   	rules3.setCharacterSize(20);
+
+   	   	sf::Text rules4;
+    rules4.setFont(font);
+   	rules4.setString("4. When all 9 squares are full, the game is over. If no player has 3 marks in a row, the game ends in a" "\n" "tie.");
+    rules4.setFillColor(sf::Color::White);
+   	rules4.setOutlineColor(sf::Color::Blue);
+   	rules4.setOutlineThickness(1);
+   	rules4.setCharacterSize(20);
+
 
     // mode
         // single
@@ -184,6 +220,15 @@ int main() {
             window.clear();
             sound.setPosition(500,500);
             window.draw(sound);
+        rules1.setPosition(1,300);
+        rules2.setPosition(1,400);
+        rules3.setPosition(1,500);
+        rules4.setPosition(1,600);
+        window.draw(rules1);
+        window.draw(rules2);
+        window.draw(rules3);
+        window.draw(rules4);
+        window.display();
             window.display();
         }
         }
