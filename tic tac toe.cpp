@@ -218,8 +218,6 @@ int main() {
         // see rules
         while (ruleb) {
             window.clear();
-            sound.setPosition(500,500);
-            window.draw(sound);
         rules1.setPosition(1,300);
         rules2.setPosition(1,400);
         rules3.setPosition(1,500);
