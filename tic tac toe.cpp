@@ -1,7 +1,5 @@
 // Copyright 2022 Jiawei Sun alinajw@bu.edu
 // Copyright 2022 Zirui Chen zirui22@bu.edu
-// Copyright 2023 Haobin Li lihaobin@bu.edu
-// Copyright 2023 Chenyuan Zhao zhaoc23@bu.edu
 
 #include<chrono>
 #include<ctime>
@@ -36,7 +34,7 @@ int main() {
     start.setFont(font);
    	start.setString("Start");
     start.setFillColor(sf::Color::White);
-   	start.setOutlineColor(sf::Color::White);
+   	start.setOutlineColor(sf::Color::Yellow);
    	start.setOutlineThickness(2);
    	start.setCharacterSize(40);
 
@@ -45,7 +43,7 @@ int main() {
     setting.setFont(font);
    	setting.setString("Setting");
     setting.setFillColor(sf::Color::White);
-   	setting.setOutlineColor(sf::Color::White);
+   	setting.setOutlineColor(sf::Color::Yellow);
    	setting.setOutlineThickness(2);
    	setting.setCharacterSize(40);
 
@@ -54,7 +52,7 @@ int main() {
     rules.setFont(font);
    	rules.setString("Rules");
     rules.setFillColor(sf::Color::White);
-   	rules.setOutlineColor(sf::Color::White);
+   	rules.setOutlineColor(sf::Color::Yellow);
    	rules.setOutlineThickness(2);
    	rules.setCharacterSize(40);
 
@@ -76,22 +74,67 @@ int main() {
     multi.setOutlineThickness(1);
     multi.setCharacterSize(30);
 
+    // sound
+    sf::Text sound;
+    sound.setFont(font);
+    sound.setString("sound");
+    sound.setFillColor(sf::Color::White);
+    sound.setOutlineColor(sf::Color::Red);
+    sound.setOutlineThickness(2);
+    sound.setCharacterSize(30);
+
+    // copyright
+    sf::Text copy1;
+    sf::Text copy2;
+    sf::Text copy3;
+    sf::Text copy4;
+    copy1.setFont(font);
+    copy2.setFont(font);
+    copy3.setFont(font);
+    copy4.setFont(font);
+    copy1.setString("// Copyright 2022 Jiawei Sun alinajw@bu.edu");
+    copy2.setString("// Copyright 2022 Zirui Chen zirui22@bu.edu");
+    copy3.setString("// Copyright 2023 Haobin Li lihaobin@bu.edu");
+    copy4.setString("// Copyright 2023 Chenyuan Zhao zhaoc23@bu.edu");
+    copy1.setFillColor(sf::Color::White);
+    copy2.setFillColor(sf::Color::White);
+    copy3.setFillColor(sf::Color::White);
+    copy4.setFillColor(sf::Color::White);
+    copy1.setCharacterSize(20);
+    copy2.setCharacterSize(20);
+    copy3.setCharacterSize(20);
+    copy4.setCharacterSize(20);
 
    	// quit 
-bool startb = false;
+    sf::Text quit;
+    quit.setFont(font);
+    quit.setString("Quit");
+    quit.setFillColor(sf::Color::White);
+    quit.setOutlineColor(sf::Color::Red);
+    quit.setOutlineThickness(1);
+    quit.setCharacterSize(20);
+
+    bool startb = false;
+    bool quitb = false;
+    bool settingb = false;
+    bool ruleb = false;
+    window.setFramerateLimit(100);
     while (window.isOpen()) {
          // display initilal window
         title.setPosition(400,150);
-            start.setPosition(150,600);
-            setting.setPosition(450,600);
-            rules.setPosition(750,600);
-            window.draw(title);
-            window.draw(start);
-            window.draw(setting);
-            window.draw(rules);
-            window.display();
+        start.setPosition(150,600);
+        setting.setPosition(450,600);
+        rules.setPosition(750,600);
+        quit.setPosition(800,50);
+        window.draw(title);
+        window.draw(start);
+        window.draw(setting);
+        window.draw(rules);
+        window.draw(quit);
+        window.display();
 
         // click start button and choose mode
+        //
         sf::Event starte;
         while (window.pollEvent(starte)) {
            
@@ -99,12 +142,18 @@ bool startb = false;
             double dx =starte.mouseButton.x;
             double dy =starte.mouseButton.y;
 
-            if (150 <= dx && dx <= 190 && 600 <= dy && dy <= 640) {
+            if (140 <= dx && dx <= 250 && 600 <= dy && dy <= 650) {
                 startb = true;
-            } else {
-                startb = false;
+            } else if (800 <= dx && dx <= 850 && 50 <= dy && dy <= 90) {
+                quitb = true;
+            } else if (440 <= dx && dx <= 550 && 600 <= dy && dy <= 650) {
+                settingb = true;
+            } else if (740 <= dx && dx <= 850 && 600 <= dy && dy <= 650) {
+                ruleb = true;
             }
         }
+
+        // choose mode
         while (startb) {
             window.clear();
             single.setPosition(250,500);
@@ -113,7 +162,26 @@ bool startb = false;
             window.draw(multi);
             window.display();
         }
+
+        // choose sound option
+        while (settingb) {
+            window.clear();
+            sound.setPosition(500,500);
+            copy1.setPosition(300,600);
+            copy2.setPosition(300,650);
+            copy3.setPosition(300,700);
+            copy4.setPosition(300,750);
+            window.draw(sound);
+            window.draw(copy1);
+            window.draw(copy2);
+            window.draw(copy3);
+            window.draw(copy4);
+            window.display();
         }
+
+        // 
+        }
+
     }
     
 }
