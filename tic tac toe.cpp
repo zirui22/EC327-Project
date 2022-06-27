@@ -130,8 +130,8 @@ int main() {
     copy4.setFont(font);
     copy1.setString("// Copyright 2022 Jiawei Sun alinajw@bu.edu");
     copy2.setString("// Copyright 2022 Zirui Chen zirui22@bu.edu");
-    copy3.setString("// Copyright 2023 Haobin Li lihaobin@bu.edu");
-    copy4.setString("// Copyright 2023 Chenyuan Zhao zhaoc23@bu.edu");
+    copy3.setString("// Copyright 2022 Haobin Li lihaobin@bu.edu");
+    copy4.setString("// Copyright 2022 Chenyuan Zhao zhaoc23@bu.edu");
     copy1.setFillColor(sf::Color::White);
     copy2.setFillColor(sf::Color::White);
     copy3.setFillColor(sf::Color::White);
