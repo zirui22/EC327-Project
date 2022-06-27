@@ -55,22 +55,60 @@ int main() {
    	rules.setOutlineThickness(2);
    	rules.setCharacterSize(40);
 
+   	// mode
+   		// single
+   	sf::Text single;
+   	single.setFont(font);
+   	single.setString("Single Player");
+    single.setFillColor(sf::Color::White);
+   	single.setOutlineColor(sf::Color::Magenta);
+   	single.setOutlineThickness(1);
+   	single.setCharacterSize(30);
+   		// double
+   	sf::Text multi;
+   	multi.setFont(font);
+   	multi.setString("Double Player");
+    multi.setFillColor(sf::Color::White);
+   	multi.setOutlineColor(sf::Color::Magenta);
+   	multi.setOutlineThickness(1);
+   	multi.setCharacterSize(30);
+
    	window.setFramerateLimit(10);
    	while (window.isOpen()) {
    		window.clear();
-
-   		sf::Event event;
-
-   		//
-   		title.setPosition(450,300);
+   		// display initilal window
+   		title.setPosition(400,150);
    		start.setPosition(150,600);
    		setting.setPosition(450,600);
-   		rules.setPosition(600,600);
+   		rules.setPosition(750,600);
    		window.draw(title);
    		window.draw(start);
    		window.draw(setting);
    		window.draw(rules);
    		window.display();
+
+   		// click start button and choose mode
+   		sf::Event starte;
+   		while (window.pollEvent(starte)) {
+           
+            if (starte.type == sf::Event::MouseButtonPressed){
+              auto location = start.getPosition();
+
+              double dx =starte.mouseButton.x;
+              double dy =starte.mouseButton.y;
+
+              if (150 <= dx && dx <= 190 && 600 <= dy && dy <= 640) {
+                window.clear();
+
+                single.setPosition(250,500);
+                multi.setPosition(750,500);
+                window.draw(single);
+                window.draw(multi);
+                window.display();
+              }
+            }
+        }
    	}
    	return 0;
 }
+
