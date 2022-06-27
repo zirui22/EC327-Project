@@ -7,7 +7,6 @@
 #include<SFML/Graphics.hpp>
 #include<string>
 #include "tttanalyzer.h"
-#include "start.h"
 using std::cin;
 using std::cout;
 using sf::Transformable;
