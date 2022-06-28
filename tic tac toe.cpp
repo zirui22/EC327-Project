@@ -154,6 +154,7 @@ int main() {
     bool quitb = false;
     bool settingb = false;
     bool ruleb = false;
+    bool singleb = false;
     window.setFramerateLimit(100);
     while (window.isOpen()) {
          // display initilal window
