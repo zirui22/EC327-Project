@@ -155,6 +155,7 @@ int main() {
     bool settingb = false;
     bool ruleb = false;
     bool singleb = false;
+	bool multib = false;
     window.setFramerateLimit(100);
     while (window.isOpen()) {
          // display initilal window
@@ -207,7 +208,8 @@ int main() {
             double ddy =startb.mouseButton.y;
              if (240 <= ddx && ddx <= 350 && 500 <= ddy && ddy <= 550) {
                 singleb = true;
-            }
+            } else if (740 <= ddx && ddx <= 850 && 500 <= ddy && ddy <= 550) {
+				 multib = true;
             }
 
             while (singleb) {
@@ -215,11 +217,11 @@ int main() {
             Game g;
             g.run();
             }
-	    while(multib) {
-		 window.close();
-		 Game g;
-		 g.runb();
-	    }
+	    	while(multib) {
+		 	window.close();
+		 	Game g;
+		 	g.runb();
+	    	}
 		
     }
         }
