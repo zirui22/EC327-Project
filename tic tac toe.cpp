@@ -214,7 +214,13 @@ int main() {
             window.close();
             Game g;
             g.run();
-        }
+            }
+	    while(multib) {
+		 window.close();
+		 Game g;
+		 g.runb();
+	    }
+		
     }
         }
 
