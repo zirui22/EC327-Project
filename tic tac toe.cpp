@@ -8,7 +8,7 @@
 #include<iostream>
 #include<SFML/Graphics.hpp>
 #include<string>
-#include "tttanalyzer.h"
+#include"inagame.h"
 using std::cin;
 using std::cout;
 using sf::Transformable;
@@ -190,6 +190,7 @@ int main() {
         }
 
         // choose mode
+            // choose mode
         while (startb) {
             window.clear();
             single.setPosition(250,500);
@@ -197,6 +198,23 @@ int main() {
             window.draw(single);
             window.draw(multi);
             window.display();
+            sf::Event startb;
+       // single
+	while (window.pollEvent(startb)) {
+            if (startb.type == sf::Event::MouseButtonPressed){
+            double ddx =startb.mouseButton.x;
+            double ddy =startb.mouseButton.y;
+             if (240 <= ddx && ddx <= 350 && 500 <= ddy && ddy <= 550) {
+                singleb = true;
+            }
+            }
+
+            while (singleb) {
+            window.close();
+            Game g;
+            g.run();
+        }
+    }
         }
 
         // choose sound option
