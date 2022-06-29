@@ -249,6 +249,8 @@ void Game::run(){
                             tiles[i].setString(s);
                             //这里机器人下
                             //将棋子的string赋值为"o"
+                            if (flag < 5)
+                            AImoves(tiles, 1);
                         }
                     }
                     break;
@@ -276,6 +278,8 @@ void Game::run(){
             if (flag == 9) {
                 //cout<<"filled"<<endl;
                 flag = 0;
+                count = 0;
+                end = true;
             }
             //满了判断输赢
             char ch=tttresult(s);
@@ -286,20 +290,32 @@ void Game::run(){
             case 'o':
                 /* code */
                 //lose
-                result.setString("LOSE!");
+                result.setString("O Win!!!");
+                flag = 0;
+                count = 0;
+                end = true;
                 break;
             case 'x':
                 /* code */
                 //win
-                result.setString("WIN!!!");
+                result.setString("X WIN!!!");
+                flag = 0;
+                count = 0;
+                end = true;
                 break;
                 case 't':
                 /* code */
                 result.setString("TIE!");
+                flag = 0;
+                count = 0;
+                end = true;
                 break;
                 case 'i':
                 /* code */
                 result.setString("ERROR!");
+                flag = 0;
+                count = 0;
+                end = true;
                 break;
             default:
                 break;
