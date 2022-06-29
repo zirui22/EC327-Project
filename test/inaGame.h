@@ -6,6 +6,7 @@
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
 #include "tttanalyzer.h"
+#include "ai.h"
 class Tile{
 private:
     float x,y;
