@@ -2,6 +2,7 @@
 #include <chrono>
 #include <SFML/Window.hpp>
 #include <SFML/Graphics.hpp>
+#include <string>
 class Tile{
 private:
     float x,y;
@@ -90,21 +91,25 @@ if(tiles[4].getString() == "") {
 	tiles[4].setString("o");
 }else if (tiles[4].getString() != "") {
 
-
+bool ad = false;
 
 for (int i = 0; i < 3 ; i++) {
 		j = i + 3;
 		k = i + 6;
-		bool ad = attackdefense (i, j, k);
-		if (ad) 
+		 ad = attackdefense (i, j, k);
+		if (ad) {
+			ad = false;
 			return;
+		}
 }
 for (int i = 0; i < 9 ; i+=3) {
 		j = i + 1;
 		k = i + 2;
-		bool ad = attackdefense (i, j, k);
-		if (ad) 
+		 ad = attackdefense (i, j, k);
+		if (ad) {
+			ad = false;
 			return;
+		}
 }
 i = 0;
 j = 4;
