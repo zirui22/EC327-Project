@@ -12,14 +12,14 @@
 # make uses the modification dates to determine
 # is the programs need to be re-built
 
-all:  1 clock
+all:  t clock
 
 
 #game: project.cpp
 	#g++ project.cpp -o project -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
-1: 1.cpp
-	g++ 1.cpp -o 1 -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
+t: team.cpp
+	g++ team.cpp -o t -lsfml-graphics -lsfml-window -lsfml-system -lsfml-audio
 
 
 
