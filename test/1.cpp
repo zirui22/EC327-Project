@@ -224,9 +224,10 @@ int counnt = 0;
             //double
 	    	while(multib) {
 		 	Game g;
+			backd = g.mul();
             //window.setVisible(false);
                 if (!backd) {
-                    backd = g.mul();
+                    backd = false;
                     multib = false;
                     window.setVisible(true);
                 }
