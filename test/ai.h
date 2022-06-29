@@ -19,6 +19,8 @@ public:
     float getX(){return x;}
     float getY(){return y;}
     sf::Text getT(){return t;}
+    bool attackdefense (int i, int j, int k);
+    void AImoves(Tile tiles, int level);
 };
 Tile::Tile(){
     sf::Font font;
@@ -28,7 +30,7 @@ Tile::Tile(){
 }
 
 
-bool attackdefense(int i,int j, int k) {
+bool Tile::attackdefense(int i,int j, int k) {
 	int w = 0;
 	int xo = 0;
 	string s;
@@ -84,32 +86,28 @@ while (w <= 1) {
 
 
 
-void AImoves(Tile tiles, int level) {
+void Tile::AImoves(Tile tiles, int level) {
 
 if (level == 1) {
 if(tiles[4].getString() == "") {
 	tiles[4].setString("o");
 }else if (tiles[4].getString() != "") {
 
-bool ad = false;
+
 
 for (int i = 0; i < 3 ; i++) {
 		j = i + 3;
 		k = i + 6;
-		 ad = attackdefense (i, j, k);
-		if (ad) {
-			ad = false;
+		bool ad = attackdefense (i, j, k);
+		if (ad) 
 			return;
-		}
 }
 for (int i = 0; i < 9 ; i+=3) {
 		j = i + 1;
 		k = i + 2;
-		 ad = attackdefense (i, j, k);
-		if (ad) {
-			ad = false;
+		bool ad = attackdefense (i, j, k);
+		if (ad) 
 			return;
-		}
 }
 i = 0;
 j = 4;
