@@ -419,7 +419,13 @@ bool Game::run(int level){
                             }
                             if (flag < 5) {
                                 //int level = 1;
-                                AImoves(tiles, level);
+                                if (level == 0) {
+                                    
+                                    AImoves(tiles, flag%2);
+                                }
+                                if (level == 1) {
+                                    AImoves(tiles, 1);
+                                }
                             }
                         }
                     }
