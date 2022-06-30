@@ -182,8 +182,8 @@ if (level == 1) {
         if (tiles[0].getString() == "") {
             tiles[0].setString("o");
             return;
-        }else if (tiles[3].getString() == "") {
-            tiles[3].setString("o");
+        }else if (tiles[2].getString() == "") {
+            tiles[2].setString("o");
             return;
         }else if (tiles[6].getString() == "") {
             tiles[6].setString("o");
